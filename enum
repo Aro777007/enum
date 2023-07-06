@@ -13,40 +13,71 @@ enum color
 	purple,
 };
 
-
-string convertor(color c)
+class mlass
 {
-	switch (c) {
-	case red:
-		return "red";
-	case blue:
-		return "blue";
-	case green:
-		return "green";
-	case black:
-		return "black";
-	case white:
-		return "white";
-	case brown:
-		return "brown";
-	case purple:
-		return"purple";
-	default:
-		return "miban";
+public:
+    static string convertor(color c)
+	{
+		switch (c) 
+		{
+		case red:
+			return "red";
+		case blue:
+			return "blue";
+		case green:
+			return "green";
+		case black:
+			return "black";
+		case white:
+			return "white";
+		case brown:
+			return "brown";
+		case purple:
+			return"purple";
+		default:
+			return "miban";
+		}
 	}
 
 
-}
+  static int convertor1(color c)
+	{
+		switch (c) {
+		case red:
+			return 0;
+		case blue:
+			return 1;
+		case green:
+			return 2;
+		case black:
+			return 3;
+		case white:
+			return 4;
+		case brown:
+			return 5;
+		case purple:
+			return 6;
+		default:
+			return 000;
+		}
 
+	}
+};
 
 int main()
-{	
-	color c;
-	c = red;
+{
+	
+	color c = green;
 	for (int i = red; i <= purple; ++i)
 	{
-		string cr = convertor(color(i));
-		cout << cr << endl; ;
+		string cr = mlass::convertor(color(i));
+		cout << cr << endl; 
+	}
+
+	for (int i = red; i <= purple; ++i)
+	{
+		int e = mlass::convertor1(color(i));
+		cout << e << endl;
 	}
 }
 
