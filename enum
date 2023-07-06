@@ -16,9 +16,9 @@ enum color
 class mlass
 {
 public:
-    static string convertor(color c)
+	static string convertor(color c)
 	{
-		switch (c) 
+		switch (c)
 		{
 		case red:
 			return "red";
@@ -40,25 +40,23 @@ public:
 	}
 
 
-  static int convertor1(color c)
+	static color convertor1(color c)
 	{
 		switch (c) {
 		case red:
-			return 0;
+			return red ;
 		case blue:
-			return 1;
+			return blue;
 		case green:
-			return 2;
+			return green;
 		case black:
-			return 3;
+			return black;
 		case white:
-			return 4;
+			return white;
 		case brown:
-			return 5;
+			return brown;
 		case purple:
-			return 6;
-		default:
-			return 000;
+			return purple;
 		}
 
 	}
@@ -66,21 +64,17 @@ public:
 
 int main()
 {
-	
+
 	color c = green;
 	for (int i = red; i <= purple; ++i)
 	{
 		string cr = mlass::convertor(color(i));
-		cout << cr << endl; 
+		cout << cr << endl;
 	}
 
 	for (int i = red; i <= purple; ++i)
 	{
-		int e = mlass::convertor1(color(i));
+		color e = mlass::convertor1(color(i));
 		cout << e << endl;
 	}
 }
-
-
-
-
